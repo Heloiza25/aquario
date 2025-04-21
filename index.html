@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aquário</title>
+    <style>
+        body {
+            background-color: #a2d5f2;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .aquario {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to top, #0077be, #00bfff);
+            position: relative;
+        }
+        
+        .peixe {
+            width: 100px;
+            position: absolute;
+            animation: nadar 10s infinite linear;
+        }
+        
+        .peixe.luzinha {
+            top: 40%;
+            left: -100px;
+            animation-delay: 0s;
+        }
+        
+        .peixe.ace {
+            top: 60%;
+            left: -100px;
+            animation-delay: 5s;
+        }
+        
+        @keyframes nadar {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(120vw);
+            }
+        }
+        
+        .titulo {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            text-shadow: 2px 2px 5px #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aquario">
+        <div class="titulo">Aquário</div>
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Peixe Luzinha" class="peixe luzinha">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Peixe Ace" class="peixe ace">
+    </div>
+</body>
+
+</html>
